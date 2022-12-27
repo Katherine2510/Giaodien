@@ -146,7 +146,7 @@ const Store =() => {
                     <p>email: Lexus@VietNam@gmail.com</p>
                     <p>website: https://www.lexus.com.vn/en/models/gx.html
                   </p>
-                  <a className="btn btn-default" href="https://www.lexus.com.vn/en/models/gx.htmle">
+                  <a className="btn btn-default" href="https://www.lexus.com.vn/en/models/gx.html">
                     Read More
                   </a>
                 </div>

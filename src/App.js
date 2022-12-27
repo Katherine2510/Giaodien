@@ -20,12 +20,18 @@ import Cars1 from './component/Cars1';
 import Admin from './component/Admin';
 import ThisFactory from './component/ThisFactory';
 import ThisWarranty from './component/ThisWarranty';
+import Products from './component/Products';
+import AdminDo from './component/AdminDo';
+import Factories from './component/Factories'
+import Warranty_centers from './component/Warranty_centers';
+import Stores from './component/Stores'
 
 
 
 const App = () => {
   return (
-    <>
+    
+  <>
       <Header />
       <Routes>
         <Route path='/' element={
@@ -113,11 +119,65 @@ const App = () => {
         <Route path='/admin' element={
           <div>
             <Admin />
+           
+            
           </div>
           
         }> 
         </Route>
       </Routes>
+
+      <Routes>
+                    <Route path='/admin/products' element={
+                    <div>
+                      <Admin />
+                      <Products />
+                     
+                     
+                    </div>  
+                    }>
+                    
+                    </Route>       
+         </Routes>
+      
+         <Routes>
+                    <Route path='/admin/factories' element={
+                    <div>
+                      <Admin />
+                      <Factories />
+                     
+                     
+                    </div>  
+                    }>
+                    
+                    </Route>       
+         </Routes>
+
+         <Routes>
+                    <Route path='/admin/warranty_centers' element={
+                    <div>
+                      <Admin />
+                      <Warranty_centers />
+                     
+                     
+                    </div>  
+                    }>
+                    
+                    </Route>       
+         </Routes>
+         <Routes>
+                    <Route path='/admin/stores' element={
+                    <div>
+                      <Admin />
+                      <Stores />
+                     
+                     
+                    </div>  
+                    }>
+                    
+                    </Route>       
+         </Routes>
+      
       <Routes>
         <Route path='/thisfactory' element={
           <div>
@@ -139,10 +199,12 @@ const App = () => {
 
 
       <Footer />
-    </>
+      </>
+      
 
-    
+  
   )
+    
 }
 
 export default App;
