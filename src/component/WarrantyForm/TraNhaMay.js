@@ -33,7 +33,7 @@ class TraNhaMay extends Component {
         };
 
         fetch(
-            "http://localhost/ProductionMove/ProductionMove/public/api/warranty/tra_cho_nha_may",
+            "http://localhost/thule3/ProductionMove/public/api/warranty/tra_cho_nha_may",
             requestOptions
         )
             .then((response) => {

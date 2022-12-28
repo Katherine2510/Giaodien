@@ -12,7 +12,7 @@ export default function PersonList(props) {
     }, [])
   
     function refreshPersonList() {
-      const ProjectAPI = axios.get('http://localhost/web2223(1)/ProductionMove/public/api/admin/view_stores')
+      const ProjectAPI = axios.get('http://localhost/thule3/ProductionMove/public/api/admin/view_stores')
         .then(res => setPersonList(res.data))
         .catch(err => console.log(err))
     }

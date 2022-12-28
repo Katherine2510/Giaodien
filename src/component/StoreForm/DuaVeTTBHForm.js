@@ -31,7 +31,7 @@ class DuaVeTTBHForm extends Component {
         };
 
         fetch(
-            "http://localhost/ProductionMove/ProductionMove/public/api/store/dua_ve_ttbh",
+            "http://localhost/thule3/ProductionMove/public/api/store/dua_ve_ttbh",
             requestOptions
         )
             .then((response) => {

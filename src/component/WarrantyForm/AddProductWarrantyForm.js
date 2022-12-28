@@ -31,7 +31,7 @@ class AddProductWarrantyForm extends Component {
         };
 
         fetch(
-            "http://localhost/ProductionMove/ProductionMove/public/api/warranty/nhan_san_pham",
+            "http://localhost/thule3/ProductionMove/public/api/warranty/nhan_san_pham",
             requestOptions
         )
             .then((response) => {

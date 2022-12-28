@@ -31,7 +31,7 @@ class TraDaiLy extends Component {
         };
 
         fetch(
-            "http://localhost/ProductionMove/ProductionMove/public/api/warranty/tra_cho_dai_ly",
+            "http://localhost/thule3/ProductionMove/public/api/warranty/tra_cho_dai_ly",
             requestOptions
         )
             .then((response) => {

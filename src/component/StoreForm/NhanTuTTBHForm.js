@@ -31,7 +31,7 @@ class NhanTuTTBHForm extends Component {
         };
 
         fetch(
-            "http://localhost/ProductionMove/ProductionMove/public/api/store/nhan_lai_tu_ttbh",
+            "http://localhost/thule3/ProductionMove/public/api/store/nhan_lai_tu_ttbh",
             requestOptions
         )
             .then((response) => {

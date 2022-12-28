@@ -30,7 +30,7 @@ class TraVeKh extends Component {
         };
 
         fetch(
-            "http://localhost/ProductionMove/ProductionMove/public/api/store/tra_lai_kh",
+            "http://localhost/thule3/ProductionMove/public/api/store/tra_lai_kh",
             requestOptions
         )
             .then((response) => {

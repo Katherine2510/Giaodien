@@ -36,7 +36,7 @@ class AddProductForm extends Component {
         };
 
         fetch(
-            "http://localhost/ProductionMove/ProductionMove/public/api/factory/add_product",
+            "http://localhost/thule3/ProductionMove/public/api/factory/add_product",
             requestOptions
         )
             .then((response) => {

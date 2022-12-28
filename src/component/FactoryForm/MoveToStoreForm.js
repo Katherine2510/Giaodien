@@ -32,7 +32,7 @@ class MoveToStoreForm extends Component {
         };
 
         fetch(
-            "http://localhost/ProductionMove/ProductionMove/public/api/factory/deliver_product_to_store",
+            "http://localhost/thule3/ProductionMove/public/api/factory/deliver_product_to_store",
             requestOptions
         )
             .then((response) => {
