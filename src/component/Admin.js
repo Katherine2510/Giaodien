@@ -188,8 +188,14 @@ const Admin =() => {
                             <ul>
                             <li>
                                 
-                                <a  href="/admin/products">
+                                <a  href="/admin/product_lines">
                                 <i className="fa fa-caret-right"> </i>Xem danh sách dòng sản phẩm
+                                </a>
+                            </li>
+                            <li>
+                                
+                                <a  href="/admin/products">
+                                <i className="fa fa-caret-right"> </i>Xem danh sách sản phẩm
                                 </a>
                             </li>
                             <li>
@@ -212,20 +218,32 @@ const Admin =() => {
                                 </a>
                             </li>
                             <li>
-                                <a>
+                                <a href='/admin/view_by_status'>
+                                <i className="fa fa-caret-right"> </i>Thống kê sản phẩm trên toàn quốc theo trạng thái
+                                </a>
+                            </li>
+                            <li>
+                                <a href='/admin/view_by_factory'>
+                                <i className="fa fa-caret-right"> </i>Thống kê sản phẩm trên toàn quốc theo nhà máy
+                                </a>
+                            </li>
+                            <li>
+                                <a href='/admin/view_by_store'>
                                 <i className="fa fa-caret-right"> </i>Thống kê sản phẩm trên toàn quốc theo cơ sở phân phối
                                 </a>
                             </li>
+                            
                             <li>
-                                <a>
-                                <i className="fa fa-caret-right"> </i>Thống kê sản phẩm trên toàn quốc theo cửa hàng
-                                </a>
-                            </li>
-                            <li>
-                                <a>
+                                <a href='/admin/view_by_warranty'>
                                 <i className="fa fa-caret-right"> </i>Thống kê sản phẩm trên toàn quốc theo trung tâm bảo hành
                                 </a>
                             </li>
+                            <li>
+                                <a href=''>
+                                <i className="fa fa-caret-right"> </i>Xem các sản phẩm mà đang ở nhà máy/đại lý/trung tâm bảo hành
+                                </a>
+                            </li>
+                            
                             
                            
                             </ul>
@@ -237,6 +255,7 @@ const Admin =() => {
                             </h4>
                             <ul>
                             <li>
+                                
                             <div>
                                 <a href="" data-toggle="modal" data-target="#modalAddUserForm">
                                 <i className="fa fa-caret-right"></i>Thêm tài khoản mới</a>

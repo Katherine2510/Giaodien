@@ -25,6 +25,13 @@ import AdminDo from './component/AdminDo';
 import Factories from './component/Factories'
 import Warranty_centers from './component/Warranty_centers';
 import Stores from './component/Stores'
+import Aproducts from './component/Aproducts'
+import Login from './component/Login';
+import ProductLines from './component/ProductLines'
+import ViewProductsByStatus from './component/ViewProductsByStatus'
+import ViewProductsByFactory from './component/ViewProductsByFactory'
+import ViewProductsByStore from './component/ViewProductsByStore'
+import ViewProductsByWarranty from './component/ViewProductsByWarranty'
 
 
 
@@ -33,6 +40,16 @@ const App = () => {
     
   <>
       <Header />
+      <Routes>
+        <Route
+          path="/login"
+          element={
+            <div>
+              <Login />
+            </div>
+          }
+        ></Route>
+      </Routes>
       <Routes>
         <Route path='/' element={
           <div>
@@ -139,6 +156,69 @@ const App = () => {
                     
                     </Route>       
          </Routes>
+         <Routes>
+                    <Route path='/admin/view_by_status' element={
+                    <div>
+                      <Admin />
+                      <ViewProductsByStatus />
+                     
+                     
+                    </div>  
+                    }>
+                    
+                    </Route>       
+         </Routes>
+         <Routes>
+                    <Route path='/admin/product_lines' element={
+                    <div>
+                      <Admin />
+                      <ProductLines />
+                     
+                     
+                    </div>  
+                    }>
+                    
+                    </Route>       
+         </Routes>
+         <Routes>
+                    <Route path='/admin/view_by_factory' element={
+                    <div>
+                      <Admin />
+                      <ViewProductsByFactory />
+                     
+                     
+                    </div>  
+                    }>
+                    
+                    </Route>       
+         </Routes>
+
+         <Routes>
+                    <Route path='/admin/view_by_store' element={
+                    <div>
+                      <Admin />
+                      <ViewProductsByStore />
+                     
+                     
+                    </div>  
+                    }>
+                    
+                    </Route>       
+         </Routes>
+
+         <Routes>
+                    <Route path='/admin/view_by_warranty' element={
+                    <div>
+                      <Admin />
+                      <ViewProductsByWarranty />
+                     
+                     
+                    </div>  
+                    }>
+                    
+                    </Route>       
+         </Routes>
+      
       
          <Routes>
                     <Route path='/admin/factories' element={
@@ -191,6 +271,15 @@ const App = () => {
         <Route path='/thiswarranty' element={
           <div>
             <ThisWarranty />
+          </div>
+          
+        }> 
+        </Route>
+      </Routes>
+      <Routes>
+        <Route path='/aproducts' element={
+          <div>
+            <Aproducts />
           </div>
           
         }> 

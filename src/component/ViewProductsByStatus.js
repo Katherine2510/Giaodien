@@ -8,24 +8,28 @@ export default function PersonList(props) {
     const [PersonList, setPersonList] = useState([])
 
     useEffect(() => {
-      axios.get('http://localhost/web2223(1)/ProductionMove/public/api/admin/view_warranty_centers')
-        .then(res => setPersonList(res.data))
-        .catch(err => console.log(err))
+      refreshPersonList();
     }, [])
   
-  
+    function refreshPersonList() {
+      const ProjectAPI = axios.get('http://localhost/web2223(1)/ProductionMove/public/api/admin/view_products_by_status')
+        .then(res => setPersonList(res.data))
+        .catch(err => console.log(err))
+    }
 
   
     return (
         
         <div col-md-9 col-sm-8 col-xs-12>
-            <h3>WARRANTY CENTER LIST</h3>
+            <h3>VIEW PRODUCT BY STATUS</h3>
     <table id= 'product-table' >
     <thead >
         <tr>
-        <th scope='col'>Warranty center code</th> 
-        <th scope='col'>Warranty center name</th>
-        <th scope='col'>Address</th>
+            <th scope='col'>Status</th>
+            <th scope='col'>The number of Product</th>
+            
+    
+       
        
         </tr>
     </thead>
@@ -34,9 +38,9 @@ export default function PersonList(props) {
     {
       PersonList.map((e, i) =>
         <tr key={i}>
-            <td>{e.warranty_center_code}</td>
-          <td>{e.warranty_center_name}</td>
-          <td>{e.address}</td>
+        <td>{e.status}</td>
+          <td>{e.num_of_products}</td>
+        
           
         </tr>  
       )

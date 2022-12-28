@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import '../css/style.css'
 import '../css/responsive.css'
 import '../css/lightbox.min.css'
@@ -7,6 +8,7 @@ import '../css/bootstrap.min.css'
 
 
 const Header =() => {
+  const navigate = useNavigate();
     return (
         <div>
         <div className="top-header">
@@ -40,9 +42,6 @@ const Header =() => {
                     <a href="/"><span>BIG</span>CORP</a>
                   </div>                       
                 </div>
-                <div className="col-sm-6 visible-sm">
-                  <div className="text-right"><button type="button">Login</button></div>
-                </div>
                 <div className="col-md-8 col-sm-12 col-xs-12 remove-padd">
                   <nav className="navbar navbar-default">
                     <div className="navbar-header page-scroll">
@@ -66,8 +65,11 @@ const Header =() => {
                   </nav>
                 </div>
                 <div className="col-md-2  col-sm-4 col-xs-12 hidden-sm">
-                  <div className="text-right"><button type="button" className="book-now-btn">LOGIN</button></div>
+                  <div className="text-right"><button type="button" className="book-now-btn" onClick={() => 
+                        navigate('/login')
+                  }>LOGIN</button></div>
                 </div>
+                
               </div>
             </div>
           </div>
