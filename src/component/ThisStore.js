@@ -1,31 +1,36 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Records from '../json/thisstore.json';
 import banner from "../images/banner5.jpg";
+import AddProductStoreForm from './StoreForm/AddProductStoreForm';
+import SoldProduct from './StoreForm/SoldProduct';
+import DuaVeTTBHForm from './StoreForm/DuaVeTTBHForm';
+import NhanTuTTBHForm from './StoreForm/NhanTuTTBHForm';
+import NhanTuKhForm from './StoreForm/NhanTuKhForm';
+import TraVeKh from './StoreForm/TraVeKh';
 
- 
-const ThisStore =() => {
+const ThisStore = () => {
     return (
-       <>
-                {/*end*/}
-                <section
+        <>
+            {/*end*/}
+            <section
                 className="image-head-wrapper"
-                style={{ backgroundImage: "url(" + banner +")" }}
+                style={{ backgroundImage: "url(" + banner + ")" }}
             >
                 <div className="inner-wrapper">
-                <h1>WELCOME TO STORE CENTER</h1>
+                    <h1>WELCOME TO STORE CENTER</h1>
                 </div>
             </section>
-                <div className="clearfix" />
-                {/*dinning*/}
-                <section className="blog">
-                    <div className="container">
+            <div className="clearfix" />
+            {/*dinning*/}
+            <section className="blog">
+                <div className="container">
                     <div className="row">
                         <div className="col-md-9 col-sm-8 col-xs-12">
-                        <h2 className="blog-title-head">STORE MANAGEMENT</h2>
-                        
-                      
-                        <div className="clearfix" />
-                        {/*your form nhap *
+                            <h2 className="blog-title-head">STORE MANAGEMENT</h2>
+
+
+                            <div className="clearfix" />
+                            {/*your form nhap *
                         <div className="single-bottom comment-form">
                             <h3>Leave your Comment</h3>
                             <form action="#" method="post">
@@ -54,455 +59,251 @@ const ThisStore =() => {
                             </form>
                         </div>
                         */}
-                        <div 
-                            className="modal fade"
-                            id="modalAddProductForm"
-                            tabIndex={-1}
-                            role="dialog"
-                            aria-labelledby="myModalLabel"
-                            aria-hidden="true"
+                            <div
+                                className="modal fade"
+                                id="modalAddProductForm"
+                                tabIndex={-1}
+                                role="dialog"
+                                aria-labelledby="myModalLabel"
+                                aria-hidden="true"
                             >
-                            <div className="modal-dialog" role="document" >
-                                <div className="modal-content single-bottom comment-form">
-                                <div className="modal-header text-center">
-                                    <h4 className="modal-title w-100 font-weight-bold">NHẬP SẢN PHẨM</h4>
-                                    <button 
-                                    type="button"
-                                    className="submit-btn"
-                                    data-dismiss="modal"
-                                    aria-label="Close"
-                                    > 
-                                    <span aria-hidden="true">Exit</span>
-                                    </button>
-                                </div>
-                                <div className="modal-body mx-3">
-                                    <div className="">
-                                    <i className="prefix grey-text" />
-                                    <label
-                                        data-error="wrong"
-                                        data-success="right"
-                                        htmlFor="defaultForm-email"
-                                    >
-                                        Product code
-                                    </label>
-                                    <input
-                                        name='product_code'
-                                        type="text"
-                                        id="defaultForm-email"
-                                        className="form-control validate"
-                                    />
-                                 
-                                   
-                                 
+                                <div className="modal-dialog" role="document" >
+                                    <div className="modal-content single-bottom comment-form">
+                                        <AddProductStoreForm />
                                     </div>
-                                    
-                                </div>
-                                <div className="modal-footer d-flex justify-content-center">
-                                    <button className="btn btn-default">ADD</button>
+
                                 </div>
                             </div>
-                                
-                            </div>
-                        </div>
-                        
-                        {/*---------------------------- */}
-                        <div 
-                            className="modal fade"
-                            id="modalAddProduct1Form"
-                            tabIndex={-1}
-                            role="dialog"
-                            aria-labelledby="myModalLabel"
-                            aria-hidden="true"
+                            {/*------------nhan tu kh---------------- */}
+                            <div
+                                className="modal fade"
+                                id="modalNhanTuKhForm"
+                                tabIndex={-1}
+                                role="dialog"
+                                aria-labelledby="myModalLabel"
+                                aria-hidden="true"
                             >
-                            <div className="modal-dialog" role="document" >
-                                <div className="modal-content single-bottom comment-form">
-                                <div className="modal-header text-center">
-                                    <h4 className="modal-title w-100 font-weight-bold">NHẬP SẢN PHẨM ĐẾN TRUNG TÂM BẢO HÀNH</h4>
-                                    <button 
-                                    type="button"
-                                    className="submit-btn"
-                                    data-dismiss="modal"
-                                    aria-label="Close"
-                                    > 
-                                    <span aria-hidden="true">Exit</span>
-                                    </button>
-                                </div>
-                                <div className="modal-body mx-3">
-                                    <div className="">
-                                    <i className="prefix grey-text" />
-                                    <label
-                                        data-error="wrong"
-                                        data-success="right"
-                                        htmlFor="defaultForm-email"
-                                    >
-                                        Product code
-                                    </label>
-                                    <input
-                                        name='product_code'
-                                        type="text"
-                                        id="defaultForm-email"
-                                        className="form-control validate"
-                                    />
+                                <div className="modal-dialog" role="document" >
+                                    <div className="modal-content single-bottom comment-form">
+                                        <NhanTuKhForm />
                                     </div>
-                                 
-                                   
-                                    
-                                    <i className=" prefix grey-text" />
-                                    <label
-                                        data-error="wrong"
-                                        data-success="right"
-                                        htmlFor="defaultForm-pass"
-                                    >
-                                        WARRANTY CENTER CODE
-                                    </label>
-
-                                    <input
-                                        name='warranty_code'
-                                        type="text"
-                                        id="defaultForm-pass"
-                                        className="form-control validate"
-                                    />
 
                                 </div>
-                                <div className="modal-footer d-flex justify-content-center">
-                                    <button className="btn btn-default">ADD</button>
-                                </div>
                             </div>
-                                
-                            </div>
-                        </div>
-                        
 
-                        <div 
-                            className="modal fade"
-                            id="modalAddProduct2Form"
-                            tabIndex={-1}
-                            role="dialog"
-                            aria-labelledby="myModalLabel"
-                            aria-hidden="true"
+                            {/*---------------------------- */}
+
+                            {/*------------tra lai kh---------------- */}
+                            <div
+                                className="modal fade"
+                                id="modalTraVeKhForm"
+                                tabIndex={-1}
+                                role="dialog"
+                                aria-labelledby="myModalLabel"
+                                aria-hidden="true"
                             >
-                            <div className="modal-dialog" role="document" >
-                                <div className="modal-content single-bottom comment-form">
-                                <div className="modal-header text-center">
-                                    <h4 className="modal-title w-100 font-weight-bold">LẤY SẢN PHẨM TỪ TRUNG TÂM BẢO HÀNH</h4>
-                                    <button 
-                                    type="button"
-                                    className="submit-btn"
-                                    data-dismiss="modal"
-                                    aria-label="Close"
-                                    > 
-                                    <span aria-hidden="true">Exit</span>
-                                    </button>
-                                </div>
-                                <div className="modal-body mx-3">
-                                    <div className="">
-                                    <i className="prefix grey-text" />
-                                    <label
-                                        data-error="wrong"
-                                        data-success="right"
-                                        htmlFor="defaultForm-email"
-                                    >
-                                        Product code
-                                    </label>
-                                    <input
-                                        name='product_code'
-                                        type="text"
-                                        id="defaultForm-email"
-                                        className="form-control validate"
-                                    />
-                                    <i className="prefix grey-text" />
-                                    <label
-                                        data-error="wrong"
-                                        data-success="right"
-                                        htmlFor="defaultForm-email"
-                                    >
-                                        Store code
-                                    </label>
-                                    <input
-                                        name='store_code'
-                                        type="text"
-                                        id="defaultForm-email"
-                                        className="form-control validate"
-                                    />
-                                 
-                                </div>   
-                                </div>
-                                <div className="modal-footer d-flex justify-content-center">
-                                    <button className="btn btn-default">ADD</button>
-                                </div>
-                            </div>
-                                
-                            </div>
-                        </div>
-                        {/**----------------------ban san pham */}
-                        
-                        <div 
-                            className="modal fade"
-                            id="modalSaleForm"
-                            tabIndex={-1}
-                            role="dialog"
-                            aria-labelledby="myModalLabel"
-                            aria-hidden="true"
-                            >
-                            <div className="modal-dialog" role="document" >
-                                <div className="modal-content single-bottom comment-form">
-                                <div className="modal-header text-center">
-                                    <h4 className="modal-title w-100 font-weight-bold">NHẬP SẢN PHẨM ĐÃ BÁN</h4>
-                                    <button 
-                                    type="button"
-                                    className="submit-btn"
-                                    data-dismiss="modal"
-                                    aria-label="Close"
-                                    > 
-                                    <span aria-hidden="true">Exit</span>
-                                    </button>
-                                </div>
-                                <div className="modal-body mx-3">
-                                    <div className="">
-                               
-                                    
-                                    <i className="prefix grey-text" />
-                                    <label
-                                        data-error="wrong"
-                                        data-success="right"
-                                        htmlFor="defaultForm-pass"
-                                    >
-                                        Product code was saled
-                                    </label>
-                                    <input
-                                        name='product_code'
-                                        type="text"
-                                        id="defaultForm-pass"
-                                        className="form-control validate"
-                                    />
-
-                                    <i className="prefix grey-text" />
-                                    <label
-                                        data-error="wrong"
-                                        data-success="right"
-                                        htmlFor="defaultForm-pass"
-                                    >
-                                        Customer code
-                                    </label>
-                                    <input
-                                    name='customer_code'
-                                        type="text"
-                                        id="defaultForm-pass"
-                                        className="form-control validate"
-                                    />
-
-                                    <i className="prefix grey-text" />
-                                    <label
-                                        data-error="wrong"
-                                        data-success="right"
-                                        htmlFor="defaultForm-pass"
-                                    >
-                                        Customer name
-                                    </label>
-                                    <input
-                                    name='customer_name'
-                                        type="text"
-                                        id="defaultForm-pass"
-                                        className="form-control validate"
-                                    />
-                                    <i className="prefix grey-text" />
-                                    <label
-                                        data-error="wrong"
-                                        data-success="right"
-                                        htmlFor="defaultForm-pass"
-                                    >
-                                        Address
-                                    </label>
-                                    <input
-                                        name='address'
-                                        type="text"
-                                        id="defaultForm-pass"
-                                        className="form-control validate"
-                                    />
-                                    <i className="prefix grey-text" />
-                                    <label
-                                        data-error="wrong"
-                                        data-success="right"
-                                        htmlFor="defaultForm-pass"
-                                    >
-                                        Phone Number
-                                    </label>
-                                    <input
-                                        type="text"
-                                        name='phone_number'
-                                        id="defaultForm-pass"
-                                        className="form-control validate"
-                                    />
-                                    <i className="prefix grey-text" />
-                                    <label
-                                        data-error="wrong"
-                                        data-success="right"
-                                        htmlFor="defaultForm-pass"
-                                    >
-                                        Order Number
-                                    </label>
-                                    <input
-                                        type="text"
-                                        name='order_number'
-                                        id="defaultForm-pass"
-                                        className="form-control validate"
-                                    />
-                                    <i className="prefix grey-text" />
-                                    <label
-                                        data-error="wrong"
-                                        data-success="right"
-                                        htmlFor="defaultForm-pass"
-                                    >
-                                        Store code
-                                    </label>
-                                    <input
-                                        name='store_code'
-                                        type="text"
-                                        id="defaultForm-pass"
-                                        className="form-control validate"
-                                    />
-                                    
-                                    
+                                <div className="modal-dialog" role="document" >
+                                    <div className="modal-content single-bottom comment-form">
+                                        <TraVeKh />
                                     </div>
-                                    
-                                </div>
-                                <div className="modal-footer d-flex justify-content-center">
-                                    <button className="btn btn-default">ADD</button>
+
                                 </div>
                             </div>
-                                
+
+                            {/*---------------------------- */}
+
+                            <div
+                                className="modal fade"
+                                id="modalDuaVeTTBHForm"
+                                tabIndex={-1}
+                                role="dialog"
+                                aria-labelledby="myModalLabel"
+                                aria-hidden="true"
+                            >
+                                <div className="modal-dialog" role="document" >
+                                    <div className="modal-content single-bottom comment-form">
+                                        <DuaVeTTBHForm />
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
-                        
-                        
+
+
+                            <div
+                                className="modal fade"
+                                id="modalNhanTuTTBHForm"
+                                tabIndex={-1}
+                                role="dialog"
+                                aria-labelledby="myModalLabel"
+                                aria-hidden="true"
+                            >
+                                <div className="modal-dialog" role="document" >
+                                    <div className="modal-content single-bottom comment-form">
+                                        <NhanTuTTBHForm />
+                                    </div>
+
+                                </div>
+                            </div>
+                            {/**----------------------ban san pham */}
+
+                            <div
+                                className="modal fade"
+                                id="modalSaleForm"
+                                tabIndex={-1}
+                                role="dialog"
+                                aria-labelledby="myModalLabel"
+                                aria-hidden="true"
+                            >
+                                <div className="modal-dialog" role="document" >
+                                    <div className="modal-content single-bottom comment-form">
+                                        <SoldProduct />
+                                    </div>
+
+                                </div>
+                            </div>
+
+
                         </div>
 
                         {/**---------------------thong ke theo nam */}
-                        <div 
+                        <div
                             className="modal fade"
                             id="modalYearForm"
                             tabIndex={-1}
                             role="dialog"
                             aria-labelledby="myModalLabel"
                             aria-hidden="true"
-                            >
+                        >
                             <div className="modal-dialog" role="document" >
                                 <div className="modal-content single-bottom comment-form">
-                                <div className="modal-header text-center">
-                                    <h4 className="modal-title w-100 font-weight-bold">THỐNG KÊ SẢN PHẨM THEO NĂM</h4>
-                                    <button 
-                                    type="button"
-                                    className="submit-btn"
-                                    data-dismiss="modal"
-                                    aria-label="Close"
-                                    > 
-                                    <span aria-hidden="true">Exit</span>
-                                    </button>
-                                </div>
-                                <div className="modal-body mx-3">
-                                    <div className="">
-                               
-                                    
-                                    <i className="prefix grey-text" />
-                                    <label
-                                        data-error="wrong"
-                                        data-success="right"
-                                        htmlFor="defaultForm-pass"
-                                    >
-                                        Year
-                                    </label>
-                                    <input
-                                        type="password"
-                                        id="defaultForm-pass"
-                                        className="form-control validate"
-                                    />
-                                    
+                                    <div className="modal-header text-center">
+                                        <h4 className="modal-title w-100 font-weight-bold">THỐNG KÊ SẢN PHẨM THEO NĂM</h4>
+                                        <button
+                                            type="button"
+                                            className="submit-btn"
+                                            data-dismiss="modal"
+                                            aria-label="Close"
+                                        >
+                                            <span aria-hidden="true">Exit</span>
+                                        </button>
                                     </div>
-                                    
-                                </div>
-                                <div className="modal-footer d-flex justify-content-center">
-                                    <button className="btn btn-default">ADD</button>
-                                </div>
-                            </div>
-                                
-                            </div>
-                        </div>
-                        
-                       
-                        <aside className="col-md-3 col-sm-4 col-xs-12">
-                        <div className="blog-list">
-                            <h4>PRODUCT MANAGEMENT
+                                    <div className="modal-body mx-3">
+                                        <div className="">
 
-                            </h4>
-                            <ul>
-                            
-                            <li>
-                                <div>
-                                    <a href="" data-toggle="modal" data-target="#modalAddProductForm">
-                                        <i className="fa fa-caret-right"></i>Thêm sản phẩm vào kho </a>
+
+                                            <i className="prefix grey-text" />
+                                            <label
+                                                data-error="wrong"
+                                                data-success="right"
+                                                htmlFor="defaultForm-pass"
+                                            >
+                                                Year
+                                            </label>
+                                            <input
+                                                type="text"
+                                                id="defaultForm-pass"
+                                                className="form-control validate"
+                                            />
+
+                                        </div>
+
+                                    </div>
+                                    <div className="modal-footer d-flex justify-content-center">
+                                        <button className="btn btn-default">ADD</button>
+                                    </div>
                                 </div>
-                                
-                            </li>
-                            <li>
-                            <div>
-                                    <a href="" data-toggle="modal" data-target="#modalSaleForm">
-                                        <i className="fa fa-caret-right"></i>Bán sản phẩm</a>
-                                </div>
-                            </li>
-                            <li>
-                            <div>
-                                    <a href="" data-toggle="modal" data-target="#modalAddProduct1Form">
-                                        <i className="fa fa-caret-right"></i>Thêm sản phẩm vào cần bảo hành </a>
-                                </div>
-                            </li>
-                            <li>
-                            <div>
-                                    <a href="" data-toggle="modal" data-target="#modalAddProduct2Form">
-                                        <i className="fa fa-caret-right"></i>Thêm sản phẩm vào đã bảo hành </a>
-                                </div>
-                            </li>
-                            <li>
-                            <div>
-                                    <a href="" data-toggle="modal" data-target="#modalYearForm">
-                                        <i className="fa fa-caret-right"></i>Thống kê sản phẩm theo năm </a>
-                                </div>
-                            </li>
-                            <li>
-                                <a>
-                                <i className="fa fa-caret-right"> </i>Phân tích số lượng
-                                </a>
-                            </li>
-                           
-                            </ul>
-                            <div className="clearfix"> </div>
+
+                            </div>
                         </div>
-                       
+
+
+                        <aside className="col-md-3 col-sm-4 col-xs-12">
+                            <div className="blog-list">
+                                <h4>PRODUCT MANAGEMENT
+
+                                </h4>
+                                <ul>
+
+                                    <li>
+                                        <a>
+                                            <i className="fa fa-caret-right"> </i>Xem tất cả sản phẩm
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="" data-toggle="modal" data-target="#modalAddProductForm">
+                                                <i className="fa fa-caret-right"></i>Thêm sản phẩm vào kho </a>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="" data-toggle="modal" data-target="#modalSaleForm">
+                                                <i className="fa fa-caret-right"></i>Bán sản phẩm</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="" data-toggle="modal" data-target="#modalNhanTuKhForm">
+                                                <i className="fa fa-caret-right"></i>Nhận từ khách hàng </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="" data-toggle="modal" data-target="#modalDuaVeTTBHForm">
+                                                <i className="fa fa-caret-right"></i>Đưa về trung tâm bảo hành </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="" data-toggle="modal" data-target="#modalNhanTuTTBHForm">
+                                                <i className="fa fa-caret-right"></i>Nhận từ trung tâm bảo hành </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="" data-toggle="modal" data-target="#modalTraVeKhForm">
+                                                <i className="fa fa-caret-right"></i>Trả về khách hàng </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="" data-toggle="modal" data-target="#modalYearForm">
+                                                <i className="fa fa-caret-right"></i>Thống kê sản phẩm đã bán </a>
+                                        </div>
+                                    </li>
+
+
+                                </ul>
+                                <div className="clearfix"> </div>
+                            </div>
+
                         </aside>
                     </div>
-                    </div>
-                </section>
-</>
-
-    )
-
-/*  
-    
-    return (
-        
-    
-       Records.map( record => 
-        {
-            return(
-                <div>
-                    <p>{record.address}</p>
                 </div>
-            )
-        })
+            </section>
+        </>
 
-     
     )
-  
-};*/
+
+    /*  
+        
+        return (
+            
+        
+           Records.map( record => 
+            {
+                return(
+                    <div>
+                        <p>{record.address}</p>
+                    </div>
+                )
+            })
+    
+         
+        )
+      
+    };*/
 }
- 
+
 export default ThisStore;
