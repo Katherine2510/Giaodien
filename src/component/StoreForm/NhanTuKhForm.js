@@ -31,7 +31,7 @@ class NhanTuKhForm extends Component {
         };
 
         fetch(
-            "http://localhost/thule3/ProductionMove/public/api/store/nhan_tu_kh",
+            "http://localhost/ProductionMove/ProductionMove/public/api/store/nhan_tu_kh",
             requestOptions
         )
             .then((response) => {

@@ -29,7 +29,7 @@ class FailedProductBack extends Component {
         };
 
         fetch(
-            "http://localhost/thule3/ProductionMove/public/api/factory/nhan_san_pham_loi",
+            "http://localhost/ProductionMove/ProductionMove/public/api/factory/nhan_san_pham_loi",
             requestOptions
         )
             .then((response) => {

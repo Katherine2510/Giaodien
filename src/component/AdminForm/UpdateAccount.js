@@ -1,28 +1,34 @@
 import React, { Component } from 'react';
 
 // Call API them san pham cua nha may
-class TraNhaMay extends Component {
+class UpdateAccount extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            product_code: "",
-            factory_code: "",
-            warranty_center_code: ""
+            place_code: "",
+            username: "",
+            password: "",
+            user_role: "",
+            place_name: "",
+            address: ""
         };
     }
 
     setParams = (event) => {
         this.setState({ [event.target.name]: event.target.value });
     };
-    callApiTraNhaMay = () => {
+    callApiUpdateAccount = () => {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 
         var urlencoded = new URLSearchParams();
-        urlencoded.append("product_code", this.state.product_code);
-        urlencoded.append("factory_code", this.state.factory_code);
-        urlencoded.append("warranty_center_code", this.state.warranty_center_code);
+        urlencoded.append("place_code", this.state.place_code);
+        urlencoded.append("username", this.state.username);
+        urlencoded.append("password", this.state.password);
+        urlencoded.append("user_role", this.state.user_role);
+        urlencoded.append("place_name", this.state.place_name);
+        urlencoded.append("address", this.state.address);
 
 
         var requestOptions = {
@@ -33,7 +39,7 @@ class TraNhaMay extends Component {
         };
 
         fetch(
-            "http://localhost/ProductionMove/ProductionMove/public/api/warranty/tra_cho_nha_may",
+            "http://localhost/ProductionMove/ProductionMove/public/api/admin/update_account",
             requestOptions
         )
             .then((response) => {
@@ -50,7 +56,7 @@ class TraNhaMay extends Component {
         return (
             <form>
                 <div className="modal-header text-center">
-                    <h4 className="modal-title w-100 font-weight-bold">CHUYỂN NHỮNG SẢN PHẨM KHÔNG THỂ SỬA VỀ NHÀ MÁY</h4>
+                    <h4 className="modal-title w-100 font-weight-bold">CẬP NHẬT THÔNG TIN TÀI KHOẢN</h4>
                     <button
                         type="button"
                         className="submit-btn"
@@ -68,30 +74,66 @@ class TraNhaMay extends Component {
                             data-success="right"
                             htmlFor="defaultForm-email"
                         >
-                            Product code
+                            Place Code
                         </label>
                         <input
+                            name='place_code'
                             type="text"
                             id="defaultForm-email"
-                            name="product_code"
                             className="form-control validate"
                             onChange={this.setParams}
                         />
+
+
+
+                        <i className=" prefix grey-text" />
+                        <label
+                            data-error="wrong"
+                            data-success="right"
+                            htmlFor="defaultForm-pass"
+                        >
+                            User name
+                        </label>
+
+                        <input
+                            name='username'
+                            type="text"
+                            id="defaultForm-pass"
+                            className="form-control validate"
+                            onChange={this.setParams}
+                        />
+
+
+                        <i className="prefix grey-text" />
+                        <label
+                            data-error="wrong"
+                            data-success="right"
+                            htmlFor="defaultForm-pass"
+                        >
+                            PassWord
+                        </label>
+
+                        <input
+                            name='password'
+                            type="text"
+                            id="defaultForm-pass"
+                            className="form-control validate"
+                            onChange={this.setParams}
+                        />
+
+
+
                     </div>
-
-
-
-                    <i className=" prefix grey-text" />
+                    <i className="prefix grey-text" />
                     <label
                         data-error="wrong"
                         data-success="right"
                         htmlFor="defaultForm-pass"
                     >
-                        Factory code
+                        Place Name
                     </label>
-
                     <input
-                        name='factory_code'
+                        name='place_name'
                         type="text"
                         id="defaultForm-pass"
                         className="form-control validate"
@@ -101,25 +143,26 @@ class TraNhaMay extends Component {
                     <label
                         data-error="wrong"
                         data-success="right"
-                        htmlFor="defaultForm-email"
+                        htmlFor="defaultForm-pass"
                     >
-                        Warranty Center Code
+                        Address
                     </label>
                     <input
-                        name='warranty_center_code'
+                        name='address'
                         type="text"
-                        id="defaultForm-email"
+                        id="defaultForm-pass"
                         className="form-control validate"
                         onChange={this.setParams}
                     />
 
+
                 </div>
                 <div className="modal-footer d-flex justify-content-center">
-                    <button className="btn btn-default" onClick={this.callApiTraNhaMay}>ADD</button>
+                    <button className="btn btn-default" onClick={this.callApiUpdateAccount}>ADD</button>
                 </div>
             </form>
         );
     }
 }
 
-export default TraNhaMay;
+export default UpdateAccount;

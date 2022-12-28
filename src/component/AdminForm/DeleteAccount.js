@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
 
 // Call API them san pham cua nha may
-class AddProductStoreForm extends Component {
+class DeleteAccount extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            product_code: "",
-            store_code: ""
+            place_code: ""
         };
     }
 
     setParams = (event) => {
         this.setState({ [event.target.name]: event.target.value });
     };
-    callApiAddProduct = () => {
+    callApiDeleteAccount = () => {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 
         var urlencoded = new URLSearchParams();
-        urlencoded.append("product_code", this.state.product_code);
-        urlencoded.append("store_code", this.state.store_code);
+        urlencoded.append("place_code", this.state.place_code);
+
 
 
         var requestOptions = {
@@ -31,7 +30,7 @@ class AddProductStoreForm extends Component {
         };
 
         fetch(
-            "http://localhost/ProductionMove/ProductionMove/public/api/store/add_product",
+            "http://localhost/ProductionMove/ProductionMove/public/api/admin/delete_account",
             requestOptions
         )
             .then((response) => {
@@ -48,7 +47,7 @@ class AddProductStoreForm extends Component {
         return (
             <form>
                 <div className="modal-header text-center">
-                    <h4 className="modal-title w-100 font-weight-bold">NHẬP SẢN PHẨM</h4>
+                    <h4 className="modal-title w-100 font-weight-bold">XÓA TÀI KHOẢN</h4>
                     <button
                         type="button"
                         className="submit-btn"
@@ -66,10 +65,10 @@ class AddProductStoreForm extends Component {
                             data-success="right"
                             htmlFor="defaultForm-email"
                         >
-                            Product code
+                            Place Code
                         </label>
                         <input
-                            name='product_code'
+                            name='place_code'
                             type="text"
                             id="defaultForm-email"
                             className="form-control validate"
@@ -78,38 +77,16 @@ class AddProductStoreForm extends Component {
 
 
 
-                    </div>
-
-                </div>
-                <div className="modal-body mx-3">
-                    <div className="">
-                        <i className="prefix grey-text" />
-                        <label
-                            data-error="wrong"
-                            data-success="right"
-                            htmlFor="defaultForm-email"
-                        >
-                            Store code
-                        </label>
-                        <input
-                            name='store_code'
-                            type="text"
-                            id="defaultForm-email"
-                            className="form-control validate"
-                        // onChange={this.setParams}
-                        />
-
-
 
                     </div>
 
                 </div>
                 <div className="modal-footer d-flex justify-content-center">
-                    <button className="btn btn-default" onClick={this.callApiAddProduct}>ADD</button>
+                    <button className="btn btn-default" onClick={this.callApiDeleteAccount}>ADD</button>
                 </div>
             </form>
         );
     }
 }
 
-export default AddProductStoreForm;
+export default DeleteAccount;

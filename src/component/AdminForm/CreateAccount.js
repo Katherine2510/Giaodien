@@ -1,36 +1,34 @@
 import React, { Component } from 'react';
 
 // Call API them san pham cua nha may
-class SoldProduct extends Component {
+class CreateAccount extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            product_code: "",
-            customer_code: "",
-            customer_name: "",
-            address: "",
-            phone_number: "",
-            order_number: "",
-            store_code: ""
+            place_code: "",
+            username: "",
+            password: "",
+            user_role: "",
+            place_name: "",
+            address: ""
         };
     }
 
     setParams = (event) => {
         this.setState({ [event.target.name]: event.target.value });
     };
-    callApiSoldProduct = () => {
+    callApiCreateAccount = () => {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 
         var urlencoded = new URLSearchParams();
-        urlencoded.append("product_code", this.state.product_code);
-        urlencoded.append("customer_code", this.state.customer_code);
-        urlencoded.append("customer_name", this.state.customer_name);
+        urlencoded.append("place_code", this.state.place_code);
+        urlencoded.append("username", this.state.username);
+        urlencoded.append("password", this.state.password);
+        urlencoded.append("user_role", this.state.user_role);
+        urlencoded.append("place_name", this.state.place_name);
         urlencoded.append("address", this.state.address);
-        urlencoded.append("phone_number", this.state.phone_number);
-        urlencoded.append("order_number", this.state.order_number);
-        urlencoded.append("store_code", this.state.store_code);
 
 
         var requestOptions = {
@@ -41,7 +39,7 @@ class SoldProduct extends Component {
         };
 
         fetch(
-            "http://localhost/ProductionMove/ProductionMove/public/api/store/sold_product",
+            "http://localhost/ProductionMove/ProductionMove/public/api/store/dua_ve_ttbh",
             requestOptions
         )
             .then((response) => {
@@ -58,7 +56,7 @@ class SoldProduct extends Component {
         return (
             <form>
                 <div className="modal-header text-center">
-                    <h4 className="modal-title w-100 font-weight-bold">NHẬP SẢN PHẨM ĐÃ BÁN</h4>
+                    <h4 className="modal-title w-100 font-weight-bold">THÊM TÀI KHOẢN MỚI</h4>
                     <button
                         type="button"
                         className="submit-btn"
@@ -70,6 +68,40 @@ class SoldProduct extends Component {
                 </div>
                 <div className="modal-body mx-3">
                     <div className="">
+                        <i className="prefix grey-text" />
+                        <label
+                            data-error="wrong"
+                            data-success="right"
+                            htmlFor="defaultForm-email"
+                        >
+                            Place Code
+                        </label>
+                        <input
+                            name='place_code'
+                            type="text"
+                            id="defaultForm-email"
+                            className="form-control validate"
+                            onChange={this.setParams}
+                        />
+
+
+
+                        <i className=" prefix grey-text" />
+                        <label
+                            data-error="wrong"
+                            data-success="right"
+                            htmlFor="defaultForm-pass"
+                        >
+                            User name
+                        </label>
+
+                        <input
+                            name='username'
+                            type="text"
+                            id="defaultForm-pass"
+                            className="form-control validate"
+                            onChange={this.setParams}
+                        />
 
 
                         <i className="prefix grey-text" />
@@ -78,10 +110,11 @@ class SoldProduct extends Component {
                             data-success="right"
                             htmlFor="defaultForm-pass"
                         >
-                            Product code was saled
+                            PassWord
                         </label>
+
                         <input
-                            name='product_code'
+                            name='password'
                             type="text"
                             id="defaultForm-pass"
                             className="form-control validate"
@@ -94,102 +127,56 @@ class SoldProduct extends Component {
                             data-success="right"
                             htmlFor="defaultForm-pass"
                         >
-                            Customer code
+                            Role
                         </label>
                         <input
-                            name='customer_code'
+                            name='user_role'
                             type="text"
                             id="defaultForm-pass"
                             className="form-control validate"
                             onChange={this.setParams}
                         />
-
-                        <i className="prefix grey-text" />
-                        <label
-                            data-error="wrong"
-                            data-success="right"
-                            htmlFor="defaultForm-pass"
-                        >
-                            Customer name
-                        </label>
-                        <input
-                            name='customer_name'
-                            type="text"
-                            id="defaultForm-pass"
-                            className="form-control validate"
-                            onChange={this.setParams}
-                        />
-                        <i className="prefix grey-text" />
-                        <label
-                            data-error="wrong"
-                            data-success="right"
-                            htmlFor="defaultForm-pass"
-                        >
-                            Address
-                        </label>
-                        <input
-                            name='address'
-                            type="text"
-                            id="defaultForm-pass"
-                            className="form-control validate"
-                            onChange={this.setParams}
-                        />
-                        <i className="prefix grey-text" />
-                        <label
-                            data-error="wrong"
-                            data-success="right"
-                            htmlFor="defaultForm-pass"
-                        >
-                            Phone Number
-                        </label>
-                        <input
-                            type="text"
-                            name='phone_number'
-                            id="defaultForm-pass"
-                            className="form-control validate"
-                            onChange={this.setParams}
-                        />
-                        <i className="prefix grey-text" />
-                        <label
-                            data-error="wrong"
-                            data-success="right"
-                            htmlFor="defaultForm-pass"
-                        >
-                            Order Number
-                        </label>
-                        <input
-                            type="text"
-                            name='order_number'
-                            id="defaultForm-pass"
-                            className="form-control validate"
-                            onChange={this.setParams}
-                        />
-                        <i className="prefix grey-text" />
-                        <label
-                            data-error="wrong"
-                            data-success="right"
-                            htmlFor="defaultForm-pass"
-                        >
-                            Store code
-                        </label>
-                        <input
-                            name='store_code'
-                            type="text"
-                            id="defaultForm-pass"
-                            className="form-control validate"
-                            onChange={this.setParams}
-                        />
-
 
                     </div>
+                    <i className="prefix grey-text" />
+                    <label
+                        data-error="wrong"
+                        data-success="right"
+                        htmlFor="defaultForm-pass"
+                    >
+                        Place Name
+                    </label>
+                    <input
+                        name='place_name'
+                        type="text"
+                        id="defaultForm-pass"
+                        className="form-control validate"
+                        onChange={this.setParams}
+                    />
+                    <i className="prefix grey-text" />
+                    <label
+                        data-error="wrong"
+                        data-success="right"
+                        htmlFor="defaultForm-pass"
+                    >
+                        Address
+                    </label>
+                    <input
+                        name='address'
+                        type="text"
+                        id="defaultForm-pass"
+                        className="form-control validate"
+                        onChange={this.setParams}
+                    />
+
 
                 </div>
                 <div className="modal-footer d-flex justify-content-center">
-                    <button className="btn btn-default" onClick={this.callApiSoldProduct}>ADD</button>
+                    <button className="btn btn-default" onClick={this.callApiCreateAccount}>ADD</button>
                 </div>
             </form>
         );
     }
 }
 
-export default SoldProduct;
+export default CreateAccount;
