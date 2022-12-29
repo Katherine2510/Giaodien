@@ -9,7 +9,6 @@ class UpdateAccount extends Component {
             place_code: "",
             username: "",
             password: "",
-            user_role: "",
             place_name: "",
             address: ""
         };
@@ -26,7 +25,6 @@ class UpdateAccount extends Component {
         urlencoded.append("place_code", this.state.place_code);
         urlencoded.append("username", this.state.username);
         urlencoded.append("password", this.state.password);
-        urlencoded.append("user_role", this.state.user_role);
         urlencoded.append("place_name", this.state.place_name);
         urlencoded.append("address", this.state.address);
 

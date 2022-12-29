@@ -39,7 +39,7 @@ class CreateAccount extends Component {
         };
 
         fetch(
-            "http://localhost/ProductionMove/ProductionMove/public/api/store/dua_ve_ttbh",
+            "http://localhost/ProductionMove/ProductionMove/public/api/admin/create_account",
             requestOptions
         )
             .then((response) => {

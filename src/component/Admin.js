@@ -7,6 +7,7 @@ import banner2 from "../images/banner2.png"
 import CreateAccount from './AdminForm/CreateAccount';
 import DeleteAccount from './AdminForm/DeleteAccount';
 import UpdateAccount from './AdminForm/UpdateAccount';
+import AddProductLineForm from './AdminForm/AddProductLineForm';
 
 const Admin = () => {
     return (
@@ -77,10 +78,27 @@ const Admin = () => {
 
                                 </div>
                             </div>
+                            <div
+                                className="modal fade"
+                                id="modalAddProductLineForm"
+                                tabIndex={-1}
+                                role="dialog"
+                                aria-labelledby="myModalLabel"
+                                aria-hidden="true"
+                            >
+                                <div className="modal-dialog" role="document" >
+                                    <div className="modal-content single-bottom comment-form">
+                                        <AddProductLineForm />
+                                    </div>
+
+                                </div>
+                            </div>
                             <section className="blog">
                                 <div className="container">
                                     <div className="row">
+
                                         <div className="col-md-9 col-sm-8 col-xs-12">
+                                            {/*
                                             <h2 className="blog-title-head">ADMIN CENTER OF BIG CORD</h2>
 
                                             <div className="blog-image-single margin-top-small">
@@ -97,7 +115,7 @@ const Admin = () => {
                                                 dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do{" "}
-                                            </p>
+    </p> */}
 
 
                                         </div>
@@ -107,6 +125,13 @@ const Admin = () => {
 
                                                 </h4>
                                                 <ul>
+                                                    <li>
+                                                        <div>
+                                                            <a href="" data-toggle="modal" data-target="#modalAddProductLineForm">
+                                                                <i className="fa fa-caret-right"></i>Thêm dòng dản phẩm mới</a>
+                                                        </div>
+
+                                                    </li>
                                                     <li>
 
                                                         <a href="/admin/products">
@@ -168,6 +193,11 @@ const Admin = () => {
 
                                                 </h4>
                                                 <ul>
+                                                    <li>
+                                                        <a>
+                                                            <i className="fa fa-caret-right"> </i>Xem tất cả các tài khoản
+                                                        </a>
+                                                    </li>
                                                     <li>
                                                         <div>
                                                             <a href="" data-toggle="modal" data-target="#modalAddUserForm">
