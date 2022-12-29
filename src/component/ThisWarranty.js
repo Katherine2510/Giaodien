@@ -4,6 +4,7 @@ import banner from "../images/banner5.jpg";
 import AddProductWarrantyForm from './WarrantyForm/AddProductWarrantyForm';
 import TraDaiLy from './WarrantyForm/TraDaiLy';
 import TraNhaMay from './WarrantyForm/TraNhaMay';
+import { Outlet, Link } from "react-router-dom";
 
 const ThisWarranty = () => {
     return (
@@ -24,7 +25,7 @@ const ThisWarranty = () => {
                     <div className="row">
                         <div className="col-md-9 col-sm-8 col-xs-12">
                             <h2 className="blog-title-head">WARRANTY MANAGEMENT CENTER</h2>
-
+                            <Outlet />
 
                             <div className="clearfix" />
 
@@ -89,9 +90,8 @@ const ThisWarranty = () => {
                                 </h4>
                                 <ul>
                                     <li>
-                                        <a>
-                                            <i className="fa fa-caret-right"> </i>Xem tất cả sản phẩm
-                                        </a>
+                                        <Link to="/thiswarranty/view_products"><i className="fa fa-caret-right"></i>Xem tất cả sản phẩm</Link>
+
                                     </li>
                                     <li>
                                         <div>
@@ -115,14 +115,12 @@ const ThisWarranty = () => {
                                     </li>
 
                                     <li>
-                                        <a>
-                                            <i className="fa fa-caret-right"> </i>Thống kê sản phẩm đã bảo hành xong
-                                        </a>
+                                        <Link to="/thiswarranty/statistic_done"><i className="fa fa-caret-right"></i>Thống kê sản phẩm đã bảo hành xong</Link>
+
                                     </li>
                                     <li>
-                                        <a>
-                                            <i className="fa fa-caret-right"> </i>Thống kê sản phẩm lỗi
-                                        </a>
+                                        <Link to="/thiswarranty/statistic_failed"><i className="fa fa-caret-right"></i>Thống kê sản phẩm lỗi</Link>
+
                                     </li>
 
                                 </ul>

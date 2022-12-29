@@ -4,6 +4,7 @@ import banner from "../images/banner5.jpg";
 import AddProductForm from './FactoryForm/AddProductForm';
 import MoveToStoreForm from './FactoryForm/MoveToStoreForm';
 import FailedProductBack from './FactoryForm/FailedProductBack';
+import { Outlet, Link } from "react-router-dom";
 
 
 const ThisFactory = () => {
@@ -25,7 +26,7 @@ const ThisFactory = () => {
                     <div className="row">
                         <div className="col-md-9 col-sm-8 col-xs-12">
                             <h2 className="blog-title-head">FACTORY MANAGEMENT CENTER</h2>
-
+                            <Outlet />
 
                             <div className="clearfix" />
                             {/*your form nhap *
@@ -116,10 +117,10 @@ const ThisFactory = () => {
 
                                 </h4>
                                 <ul>
+
                                     <li>
-                                        <a>
-                                            <i className="fa fa-caret-right"> </i>Xem tất cả sản phẩm của nhà máy
-                                        </a>
+                                        <Link to="/thisfactory/view_products"><i className="fa fa-caret-right"></i>Xem tất cả sản phẩm của nhà máy</Link>
+
                                     </li>
 
                                     <li>
@@ -143,21 +144,18 @@ const ThisFactory = () => {
                                         </div>
                                     </li>
                                     <li>
-                                        <a>
-                                            <i className="fa fa-caret-right"> </i>Xem các sản phẩm lỗi
-                                        </a>
+                                        <Link to="/thisfactory/view_failed_products"><i className="fa fa-caret-right"></i>Xem các sản phẩm lỗi</Link>
+
                                     </li>
 
 
                                     <li>
-                                        <a>
-                                            <i className="fa fa-caret-right"> </i>Thống kê sản phẩm đã bán
-                                        </a>
+                                        <Link to="/thisfactory/statistic_sold_product"><i className="fa fa-caret-right"></i>Thống kê sản phẩm đã bán</Link>
+
                                     </li>
                                     <li>
-                                        <a>
-                                            <i className="fa fa-caret-right"> </i>Thống kê sản phẩm lỗi theo dòng sản phẩm
-                                        </a>
+                                        <Link to="/thisfactory/statistic_failed_by_productline"><i className="fa fa-caret-right"></i>Thống kê sản phẩm lỗi theo dòng sản phẩm</Link>
+
                                     </li>
 
 

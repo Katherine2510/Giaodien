@@ -8,6 +8,7 @@ import CreateAccount from './AdminForm/CreateAccount';
 import DeleteAccount from './AdminForm/DeleteAccount';
 import UpdateAccount from './AdminForm/UpdateAccount';
 import AddProductLineForm from './AdminForm/AddProductLineForm';
+import { Outlet, Link } from "react-router-dom";
 
 const Admin = () => {
     return (
@@ -98,6 +99,7 @@ const Admin = () => {
                                     <div className="row">
 
                                         <div className="col-md-9 col-sm-8 col-xs-12">
+                                            <Outlet />
                                             {/*
                                             <h2 className="blog-title-head">ADMIN CENTER OF BIG CORD</h2>
 
@@ -133,55 +135,36 @@ const Admin = () => {
 
                                                     </li>
                                                     <li>
+                                                        <Link to="/admin/all_products"><i className="fa fa-caret-right"></i>Xem tất cả sản phẩm</Link>
 
-                                                        <a href="/admin/products">
-                                                            <i className="fa fa-caret-right"> </i>Xem tất cả sản phẩm
-                                                        </a>
                                                     </li>
                                                     <li>
 
-                                                        <a href="/admin/products">
-                                                            <i className="fa fa-caret-right"> </i>Xem danh sách dòng sản phẩm
-                                                        </a>
+                                                        <Link to="/admin/all_product_lines"><i className="fa fa-caret-right"></i>Xem tất cả dòng sản phẩm</Link>
                                                     </li>
                                                     <li>
+                                                        <Link to="/admin/factories"><i className="fa fa-caret-right"></i>Xem danh sách nhà máy</Link>
 
-                                                        <a href='/admin/factories'>
-                                                            <i className="fa fa-caret-right"> </i>Xem danh sách nhà máy
-                                                        </a>
                                                     </li>
                                                     <li>
-
-                                                        <a href='/admin/stores'>
-                                                            <i className="fa fa-caret-right" > </i>Xem danh sách đại lý
-                                                        </a>
+                                                        <Link to="/admin/stores"><i className="fa fa-caret-right"></i>Xem danh sách đại lý</Link>
                                                     </li>
 
                                                     <li>
+                                                        <Link to="/admin/warranty_centers"><i className="fa fa-caret-right"></i>Xem danh sách trung tâm bảo hành</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link to="/admin/statisticbyfactory"><i className="fa fa-caret-right"></i>Thống kê sản phẩm trên toàn quốc theo nhà máy</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link to="/admin/statisticbystore"><i className="fa fa-caret-right"></i>Thống kê sản phẩm trên toàn quốc theo đại lý phân phối</Link>
 
-                                                        <a href='/admin/warranty_centers'>
-                                                            <i className="fa fa-caret-right"> </i>Xem danh sách trung tâm bảo hành
-                                                        </a>
                                                     </li>
                                                     <li>
-                                                        <a>
-                                                            <i className="fa fa-caret-right"> </i>Thống kê sản phẩm trên toàn quốc theo nhà máy
-                                                        </a>
+                                                        <Link to="/admin/statisticbywarranty"><i className="fa fa-caret-right"></i>Thống kê sản phẩm trên toàn quốc theo trung tâm bảo hành</Link>
                                                     </li>
                                                     <li>
-                                                        <a>
-                                                            <i className="fa fa-caret-right"> </i>Thống kê sản phẩm trên toàn quốc theo đại lý phân phối
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a>
-                                                            <i className="fa fa-caret-right"> </i>Thống kê sản phẩm trên toàn quốc theo trung tâm bảo hành
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a>
-                                                            <i className="fa fa-caret-right"> </i>Thống kê sản phẩm trên toàn quốc theo trạng thái
-                                                        </a>
+                                                        <Link to="/admin/statisticbystatus"><i className="fa fa-caret-right"></i>Thống kê sản phẩm trên toàn quốc theo trạng thái</Link>
                                                     </li>
 
 
@@ -193,11 +176,7 @@ const Admin = () => {
 
                                                 </h4>
                                                 <ul>
-                                                    <li>
-                                                        <a>
-                                                            <i className="fa fa-caret-right"> </i>Xem tất cả các tài khoản
-                                                        </a>
-                                                    </li>
+
                                                     <li>
                                                         <div>
                                                             <a href="" data-toggle="modal" data-target="#modalAddUserForm">
@@ -233,9 +212,10 @@ const Admin = () => {
                             </section>
 
                         </div>
-                    </div>
-                </div>
-            </section>
+                    </div >
+                </div >
+            </section >
+
         </>
 
     )

@@ -7,6 +7,7 @@ import DuaVeTTBHForm from './StoreForm/DuaVeTTBHForm';
 import NhanTuTTBHForm from './StoreForm/NhanTuTTBHForm';
 import NhanTuKhForm from './StoreForm/NhanTuKhForm';
 import TraVeKh from './StoreForm/TraVeKh';
+import { Outlet, Link } from "react-router-dom";
 
 const ThisStore = () => {
     return (
@@ -27,7 +28,7 @@ const ThisStore = () => {
                     <div className="row">
                         <div className="col-md-9 col-sm-8 col-xs-12">
                             <h2 className="blog-title-head">STORE MANAGEMENT</h2>
-
+                            <Outlet />
 
                             <div className="clearfix" />
                             {/*your form nhap *
@@ -225,14 +226,14 @@ const ThisStore = () => {
                                 <ul>
 
                                     <li>
-                                        <a>
-                                            <i className="fa fa-caret-right"> </i>Xem tất cả sản phẩm
-                                        </a>
+                                        <Link to="/thisstore/view_products"><i className="fa fa-caret-right"></i>Xem tất cả sản phẩm</Link>
+
                                     </li>
                                     <li>
+
                                         <div>
                                             <a href="" data-toggle="modal" data-target="#modalAddProductForm">
-                                                <i className="fa fa-caret-right"></i>Thêm sản phẩm vào kho </a>
+                                                <i className="fa fa-caret-right"></i>Nhập sản phẩm vào kho</a>
                                         </div>
 
                                     </li>
@@ -267,10 +268,8 @@ const ThisStore = () => {
                                         </div>
                                     </li>
                                     <li>
-                                        <div>
-                                            <a href="" data-toggle="modal" data-target="#modalYearForm">
-                                                <i className="fa fa-caret-right"></i>Thống kê sản phẩm đã bán </a>
-                                        </div>
+                                        <Link to="/thisstore/statistic_sold_product"><i className="fa fa-caret-right"></i>Thống kê sản phẩm đã bán</Link>
+
                                     </li>
 
 

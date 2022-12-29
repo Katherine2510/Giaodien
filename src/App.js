@@ -12,6 +12,9 @@ import Footer from "./component/Footer";
 import Cars from "./component/Cars";
 import Store from "./component/Store";
 import { Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router
+} from "react-router-dom";
 import ThisStore from "./component/ThisStore";
 import Warranty from "./component/Warranty";
 import News from "./component/News";
@@ -26,6 +29,11 @@ import Factories from "./component/Factories";
 import Warranty_centers from "./component/Warranty_centers";
 import Stores from "./component/Stores";
 import Login from "./component/Login/Login";
+import FactoryProduct from "./component/FactoryProduct/FactoryProduct";
+import FactoryStatistic from "./component/FactoryProduct/FactoryStatistic";
+import StoreProduct from "./component/StoreProduct/StoreProduct";
+import WarrantyProduct from "./component/WarrantyProduct/WarrantyProduct";
+
 
 const App = () => {
   return (
@@ -113,16 +121,7 @@ const App = () => {
           }
         ></Route>
       </Routes>
-      <Routes>
-        <Route
-          path="/thisstore"
-          element={
-            <div>
-              <ThisStore />
-            </div>
-          }
-        ></Route>
-      </Routes>
+
       <Routes>
         <Route
           path="/admin"
@@ -131,54 +130,17 @@ const App = () => {
               <Admin />
             </div>
           }
-        ></Route>
-      </Routes>
-
-      <Routes>
-        <Route
-          path="/admin/products"
-          element={
-            <div>
-              <Admin />
-              <Products />
-            </div>
-          }
-        ></Route>
-      </Routes>
-
-      <Routes>
-        <Route
-          path="/admin/factories"
-          element={
-            <div>
-              <Admin />
-              <Factories />
-            </div>
-          }
-        ></Route>
-      </Routes>
-
-      <Routes>
-        <Route
-          path="/admin/warranty_centers"
-          element={
-            <div>
-              <Admin />
-              <Warranty_centers />
-            </div>
-          }
-        ></Route>
-      </Routes>
-      <Routes>
-        <Route
-          path="/admin/stores"
-          element={
-            <div>
-              <Admin />
-              <Stores />
-            </div>
-          }
-        ></Route>
+        >
+          <Route path="all_products" element={<Products />}></Route>
+          <Route path="all_product_lines" element={<Products />}></Route>
+          <Route path="factories" element={<Factories />}></Route>
+          <Route path="stores" element={<Stores />}></Route>
+          <Route path="warranty_centers" element={<Warranty_centers />}></Route>
+          <Route path="statisticbyfactory" element={<Warranty_centers />}></Route>
+          <Route path="statisticbystore" element={<Warranty_centers />}></Route>
+          <Route path="statisticbywarranty" element={<Warranty_centers />}></Route>
+          <Route path="statisticbystatus" element={<Warranty_centers />}></Route>
+        </Route>
       </Routes>
 
       <Routes>
@@ -189,8 +151,31 @@ const App = () => {
               <ThisFactory />
             </div>
           }
-        ></Route>
+        >
+          <Route path="view_products" element={<FactoryProduct />}></Route>
+          <Route path="view_failed_products" element={<FactoryProduct />}></Route>
+          <Route path="statistic_sold_product" element={<Factories />}></Route>
+          <Route path="statistic_failed_by_productline" element={<Stores />}></Route>
+
+        </Route>
       </Routes>
+
+      <Routes>
+        <Route
+          path="/thisstore"
+          element={
+            <div>
+              <ThisStore />
+            </div>
+          }
+        >
+          <Route path="view_products" element={<StoreProduct />}></Route>
+          <Route path="statistic_sold_product" element={<Products />}></Route>
+
+
+        </Route>
+      </Routes>
+
       <Routes>
         <Route
           path="/thiswarranty"
@@ -199,11 +184,20 @@ const App = () => {
               <ThisWarranty />
             </div>
           }
-        ></Route>
+        >
+          <Route path="view_products" element={<WarrantyProduct />}></Route>
+          <Route path="statistic_done" element={<Factories />}></Route>
+          <Route path="statistic_failed" element={<Factories />}></Route>
+
+        </Route>
       </Routes>
 
+
+
+
+
       <Footer />
-    </>
+    </ >
   );
 };
 
