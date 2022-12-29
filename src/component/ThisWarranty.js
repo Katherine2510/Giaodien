@@ -115,12 +115,12 @@ const ThisWarranty = () => {
                                     </li>
 
                                     <li>
-                                        <a>
+                                        <a href="warranty/statistic_done">
                                             <i className="fa fa-caret-right"> </i>Thống kê sản phẩm đã bảo hành xong
                                         </a>
                                     </li>
                                     <li>
-                                        <a>
+                                        <a href="warranty/statistic_failed">
                                             <i className="fa fa-caret-right"> </i>Thống kê sản phẩm lỗi
                                         </a>
                                     </li>

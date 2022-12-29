@@ -30,6 +30,9 @@ import StoreProduct from "./component/StoreProduct/StoreProduct";
 import FactoryProduct from "./component/FactoryProduct/FactoryProduct";
 import WarrantyProduct from "./component/WarrantyProduct/WarrantyProduct"
 import FactoryStatistic from "./component/FactoryProduct/FactoryStatistic"
+import FactoryFailedProduct from "./component/FactoryProduct/FactoryFailedProduct"
+import WarrantyStatisticDone from "./component/WarrantyProduct/WarrantyStatisticDone"
+import WarrantyStatisticFailed from "./component/WarrantyProduct/WarrantyStatisticFailed"
 
 const App = () => {
   return (
@@ -255,7 +258,40 @@ const App = () => {
           }
         ></Route>
       </Routes>
+      <Routes>
+        <Route
+          path="/factory/view_failed_products"
+          element={
+            <div>
+              <ThisFactory />
+              <FactoryFailedProduct />
+            </div>
+          }
+        ></Route>
+      </Routes>
 
+      <Routes>
+        <Route
+          path="/warranty/statistic_done"
+          element={
+            <div>
+              <ThisWarranty />
+              <WarrantyStatisticDone />
+            </div>
+          }
+        ></Route>
+      </Routes>
+      <Routes>
+        <Route
+          path="/warranty/statistic_failed"
+          element={
+            <div>
+              <ThisWarranty />
+              <WarrantyStatisticFailed />
+            </div>
+          }
+        ></Route>
+      </Routes>
       <Footer />
     </>
   );

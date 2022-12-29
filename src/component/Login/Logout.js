@@ -4,13 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 //import "../../css/style-login.css";
 
-const roleType = {
-    factory: 'factory',
-    store:'store',
-    admin:'admin',
-    warranty:'warranty_center'
-    //thêm các role vào đây,
-}
 
 const Login = () => {
     const [userName, setUserName] = useState('');
@@ -57,13 +50,15 @@ const Login = () => {
       })
       .then((result) => {
         console.log(result);
-        //localStorage.setItem("status", result.status);
+        localStorage.setItem("accessToken", result.accessToken);
         //thêm token vào local storage
         // các màn khác phải xét nếu chưa có token thì ra màn login
         // chị nghĩ các em làm bấm vào logout nó ra màn login là đc, dành thời gian sửa cái khác
         // alert("Thanh cong"); //ko cần dòng này
+     
         localStorage.setItem("place_code", result.user.place_code)
-        toast.success('thàng công')
+        
+        //toast.success('thàng công')
         setPassword('');
         setUserName('');
         switch (result?.user?.user_role) {

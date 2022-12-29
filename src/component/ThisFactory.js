@@ -143,7 +143,7 @@ const ThisFactory = () => {
                                         </div>
                                     </li>
                                     <li>
-                                        <a>
+                                        <a href="/factory/view_failed_products">
                                             <i className="fa fa-caret-right"> </i>Xem các sản phẩm lỗi
                                         </a>
                                     </li>
