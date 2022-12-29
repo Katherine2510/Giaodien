@@ -89,7 +89,7 @@ const ThisWarranty = () => {
                                 </h4>
                                 <ul>
                                     <li>
-                                        <a>
+                                        <a href='thiswarranty/view_products'>
                                             <i className="fa fa-caret-right"> </i>Xem tất cả sản phẩm
                                         </a>
                                     </li>

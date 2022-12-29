@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Records from '../json/thisstore.json';
+//import Records from '../json/thisstore.json';
 import banner from "../images/banner5.jpg";
 import AddProductStoreForm from './StoreForm/AddProductStoreForm';
 import SoldProduct from './StoreForm/SoldProduct';
@@ -225,7 +225,7 @@ const ThisStore = () => {
                                 <ul>
 
                                     <li>
-                                        <a>
+                                        <a href='/thisstore/view_products'>
                                             <i className="fa fa-caret-right"> </i>Xem tất cả sản phẩm
                                         </a>
                                     </li>

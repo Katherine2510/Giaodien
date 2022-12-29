@@ -26,6 +26,10 @@ import Factories from "./component/Factories";
 import Warranty_centers from "./component/Warranty_centers";
 import Stores from "./component/Stores";
 import Login from "./component/Login/Login";
+import StoreProduct from "./component/StoreProduct/StoreProduct";
+import FactoryProduct from "./component/FactoryProduct/FactoryProduct";
+import WarrantyProduct from "./component/WarrantyProduct/WarrantyProduct"
+import FactoryStatistic from "./component/FactoryProduct/FactoryStatistic"
 
 const App = () => {
   return (
@@ -191,12 +195,62 @@ const App = () => {
           }
         ></Route>
       </Routes>
+
+      <Routes>
+        <Route
+          path="/thisstore/view_products"
+          element={
+            <div>
+            <ThisStore />
+              <StoreProduct />
+            </div>
+          }
+        ></Route>
+      </Routes>
+      <Routes>
+        <Route
+          path="/thisfactory/view_products"
+          element={
+            <div>
+            <ThisFactory />
+              <FactoryProduct />
+            </div>
+          }
+        ></Route>
+      </Routes>
+      
+
+      <Routes>
+        <Route
+          path="/thiswarranty/view_products"
+          element={
+            <div>
+            <ThisWarranty />
+              <WarrantyProduct />
+            </div>
+          }
+        ></Route>
+      </Routes>
+      
+      
       <Routes>
         <Route
           path="/thiswarranty"
           element={
             <div>
               <ThisWarranty />
+            </div>
+          }
+        ></Route>
+      </Routes>
+
+      <Routes>
+        <Route
+          path="/factory/statistic_failed_by_product_lines"
+          element={
+            <div>
+              <ThisFactory />
+              <FactoryStatistic />
             </div>
           }
         ></Route>

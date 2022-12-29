@@ -117,7 +117,7 @@ const ThisFactory = () => {
                                 </h4>
                                 <ul>
                                     <li>
-                                        <a>
+                                        <a href='/thisfactory/view_products'>
                                             <i className="fa fa-caret-right"> </i>Xem tất cả sản phẩm của nhà máy
                                         </a>
                                     </li>
@@ -155,7 +155,7 @@ const ThisFactory = () => {
                                         </a>
                                     </li>
                                     <li>
-                                        <a>
+                                        <a href="/factory/statistic_failed_by_product_lines">
                                             <i className="fa fa-caret-right"> </i>Thống kê sản phẩm lỗi theo dòng sản phẩm
                                         </a>
                                     </li>
