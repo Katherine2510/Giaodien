@@ -50,7 +50,7 @@ export default function FactoryStatisticByFactory() {
             <table id="product-table">
                 <thead>
                     <tr>
-                        <th scope="col">Tổng sản phẩm lõi</th>
+                        <th scope="col">Tổng sản phẩm lỗi</th>
                     </tr>
                 </thead>
 

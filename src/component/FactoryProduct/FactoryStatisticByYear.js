@@ -30,15 +30,15 @@ export default function FactoryStatisticByYear() {
     return (
         <div col-md-9 col-sm-8 col-xs-12>
 
-            <label >Choose a year:</label>
+            <label className="select-selected-label">Choose a year:</label>
 
-            <select id="selected" onChange={(d) => setYear(d.target.value)}>
+            <select id="selected" onChange={(d) => setYear(d.target.value)} className="custom-select select-selected">
                 <option>year</option>
                 <option value="2022">2022</option>
                 <option value="2023">2023</option>
                 <option value="2024">2024</option>
                 <option value="2025">2025</option>
-            </select>
+            </select >
             <h3>PRODUCT LIST</h3>
 
 
@@ -94,7 +94,7 @@ export default function FactoryStatisticByYear() {
                     ))}
                 </tbody>
             </table>
-        </div>
+        </div >
     );
 
 

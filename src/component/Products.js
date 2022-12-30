@@ -42,7 +42,7 @@ export default function AllProducts() {
     <div col-md-9 col-sm-8 col-xs-12>
 
       <h3>PRODUCT LIST</h3>
-      <table id='product-table' >
+      <table id='product-table'>
         <thead >
           <tr>
             <th scope='col'>product_code</th>
@@ -71,7 +71,7 @@ export default function AllProducts() {
 
 
                 <td>
-                  <Popup trigger={<button className='btn'>Click me</button>} className='modall' position="left center">
+                  <Popup trigger={<button className='btn'>Click me</button>} className='modalll' position="left center">
                     <Aproducts value={e.product_code} />
                   </Popup>
                 </td>

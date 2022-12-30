@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
-//import "../../css/style-login.css";
+// import "../../css/style-login.css";
 
 const roleType = {
   factory: 'factory',
@@ -89,19 +89,19 @@ const Login = () => {
   };
 
   return (
-    <form className="format">
+    <form className="format div-login">
       <h1>BIGCORP</h1>
 
-      <div class="user-box">
+      <div class="user-box" className="single-bottom comment-form">
         <label>Username:</label>
-        <input type="text" name="username" onChange={(event: any) => setUserName(event.target.value)} />
+        <input type="text" name="username" onChange={(event: any) => setUserName(event.target.value)} className="form-control" />
       </div>
       <div class="user-box">
         <label>Password:</label>
-        <input type="password" name="password" onChange={(event: any) => setPassword(event.target.value)} />
+        <input type="password" name="password" onChange={(event: any) => setPassword(event.target.value)} className="form-control" />
       </div>
       <div>
-        <button type="button" name="username" onClick={clickLogin}>
+        <button type="button" name="username" onClick={clickLogin} className="book-now-btn">
           Login
         </button>
       </div>

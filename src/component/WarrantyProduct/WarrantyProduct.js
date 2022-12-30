@@ -6,6 +6,8 @@ import { useEffect } from "react";
 //import Aproducts from "./Aproducts";
 import axios from "axios";
 import { set } from "react-hook-form";
+import Popup from 'reactjs-popup';
+import Aproducts from '../Aproducts'
 
 export default function WarrantyProduct() {
     const [WarrantyProduct, setWarrantyProduct] = useState([]);
@@ -35,6 +37,7 @@ export default function WarrantyProduct() {
                         <th scope="col">product_name</th>
                         <th scope="col">brand</th>
                         <th scope="col">status</th>
+                        <th scope="col">Infomation</th>
                     </tr>
                 </thead>
 
@@ -46,6 +49,11 @@ export default function WarrantyProduct() {
                             <td>{e.product_name}</td>
                             <td>{e.brand}</td>
                             <td>{e.status}</td>
+                            <td>
+                                <Popup trigger={<button className='btn'>Click me</button>} className='modalll' position="left center">
+                                    <Aproducts value={e.product_code} />
+                                </Popup>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
