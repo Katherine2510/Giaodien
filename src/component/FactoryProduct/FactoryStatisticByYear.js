@@ -26,8 +26,8 @@ export default function FactoryStatisticByYear() {
     const [post, setPost] = useState([]);
 
 
-    return (
 
+    return (
         <div col-md-9 col-sm-8 col-xs-12>
 
             <label >Choose a year:</label>
@@ -40,6 +40,7 @@ export default function FactoryStatisticByYear() {
                 <option value="2025">2025</option>
             </select>
             <h3>PRODUCT LIST</h3>
+
 
             <table id="product-table">
                 <thead>
@@ -95,4 +96,8 @@ export default function FactoryStatisticByYear() {
             </table>
         </div>
     );
+
+
+
+
 }

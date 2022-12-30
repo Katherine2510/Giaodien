@@ -64,6 +64,24 @@ export default function StoreStatisticByYear() {
                     ))}
                 </tbody>
             </table>
+
+            <table id="product-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Tổng sản phẩm bán</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {StoreStatisticByYear && StoreStatisticByYear.slice(StoreStatisticByYear.length - 1, StoreStatisticByYear.length).map((e, index) => (
+                        <tr key={index}>
+                            <td>{e.all_sold_products}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+            <br />
+
             <table id="product-table">
                 <thead>
                     <tr>
@@ -82,22 +100,7 @@ export default function StoreStatisticByYear() {
                     ))}
                 </tbody>
             </table>
-            <table id="product-table">
-                <thead>
-                    <tr>
-                        <th scope="col">Tổng sản phẩm bán</th>
-                    </tr>
-                </thead>
 
-                <tbody>
-                    {StoreStatisticByYear && StoreStatisticByYear.slice(StoreStatisticByYear.length - 1, StoreStatisticByYear.length).map((e, index) => (
-                        <tr key={index}>
-                            <td>{e.all_sold_products}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-            <br />
 
         </div>
     );

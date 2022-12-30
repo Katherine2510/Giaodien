@@ -73,7 +73,9 @@ const App = () => {
               <Blog />
             </div>
           }
-        ></Route>
+        >
+
+        </Route>
       </Routes>
 
       <Routes>
